@@ -64,6 +64,10 @@ h3 {
     font-family: "Arial";
 }
 
+h3:hover {
+    text-decoration: underline;
+}
+
 sup {
     font-size: 0.6em;
 }
@@ -71,7 +75,7 @@ sup {
 .flex-between {
     display: flex;
     justify-content: space-between; 
-    column-gap: 28px;
+    /* column-gap: 28px; */
     row-gap: 28px;
     color: #b1b1d2;
     flex-wrap: wrap;
@@ -86,10 +90,10 @@ sup {
     padding-bottom: 29px;
 } 
 
-.footer-menu.column:hover {
+/* .footer-menu.column:hover {
     color: #fd8300;
     text-decoration:underline;
-}
+} */
 
 .messengercolumn {
     padding-top: 42px;
@@ -109,6 +113,10 @@ sup {
     margin: 0;
     padding-left: 0;
     list-style: none;
+    /* border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(-45deg);
+    transition: all .5s ease; */
 }
 
 .nav-menu {
@@ -119,6 +127,10 @@ sup {
 ul {
     list-style: none;
     padding: 0;
+}
+
+ul:hover {
+    color: #666666;
 }
 
 .top-menu a {
@@ -215,6 +227,10 @@ a.instagram:hover {
     position: relative;
 }
 
+.phones a:hover {
+    text-decoration: underline;
+}
+
 .phone,
 .mail,
 .skype {
@@ -229,6 +245,7 @@ a.instagram:hover {
     left: -28px;
     top: 0;
     background: url(../img/Sprite-hata.png) no-repeat;
+    
 }
 
 .phone:before { 
@@ -243,12 +260,22 @@ a.instagram:hover {
     box-sizing: border-box;
 }
 
+.messenger:hover {
+    text-decoration: underline;
+    color: #fd8300;
+}
+
 .messenger .mail {
     font-size: 16rem;
     line-height: 24px;
     text-decoration: underline;
     color: #25252c;
     font-family: "Arial";
+}
+
+.messenger .mail:hover {
+    text-decoration: underline;
+    color: #25252c;
 }
 
 .mail:before {
@@ -395,6 +422,7 @@ a.instagram:hover {
 .aside-menu {
     background-color: #e4e4ec;
     position: sticky;
+    border-radius: 3rem;
 }
 
 .aside-menu p {
@@ -489,8 +517,19 @@ a.instagram:hover {
     padding-left: 0;
     list-style: none;
     box-shadow: inset 0px -1px 0px #cecedd;
-    background-color: #e4e4ec;
+    /* background-color: #e4e4ec;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(-45deg);
+    transition: all .5s ease; */
 }
+
+/* .menu {  
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(-45deg);
+    transition: all .5s ease;
+} */
 
 .menu a {
     background-color: #666666;
@@ -565,13 +604,32 @@ a.instagram:hover {
     text-decoration: none;
 }
 
+.footer-menu:hover {
+    text-decoration: underline;
+    color: #fd8300;
+}
+
+.footer-menulihiver {
+    text-decoration:underline;
+    color: #666666;
+}
+
 .aside-menu {
     position: sticky;
     top: 20px;
+    border-radius: 3rem;
+    /* border-right: 2rem solid #666;
+    border-bottom: 2rem solid #666;
+    transform: rotate(-45deg);
+    transition: all .5s ease; */
 }
 
 @media screen and (min-width: 580px)  {
     html {
         font-size: 1px;
     }
+}
+
+.top-menu > div {
+    justify-content: space-between;
 }
