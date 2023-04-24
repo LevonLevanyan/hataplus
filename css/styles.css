@@ -39,6 +39,11 @@ body {
     width: 22%;
 }
 
+.column>ul>li:hover {
+    color: #fd8300;
+    text-decoration: underline;
+}
+
 .sup {
     font-size: 0.6em;
 }
@@ -90,10 +95,10 @@ sup {
     padding-bottom: 29px;
 } 
 
-/* .footer-menu.column:hover {
+.footer-menu.column:hover {
     color: #fd8300;
     text-decoration:underline;
-} */
+}
 
 .messengercolumn {
     padding-top: 42px;
@@ -271,6 +276,7 @@ a.instagram:hover {
     text-decoration: underline;
     color: #25252c;
     font-family: "Arial";
+    text-decoration: none;
 }
 
 .messenger .mail:hover {
@@ -291,7 +297,11 @@ a.instagram:hover {
     font-family: "Arial";
 }
 
-.skype {
+.messenger .skype:hover {
+    text-decoration: none;
+}
+
+.skype a {
     text-decoration: none;
 }
 
@@ -436,6 +446,11 @@ a.instagram:hover {
     padding-top: 17px;
 }
 
+.aside-menu>li>a {
+    position: relative; 
+    color: #25252c;  
+}
+
 .figurs {
     display: flex;
     row-gap: 30px;
@@ -548,8 +563,13 @@ a.instagram:hover {
 }
 
 .menu.sub-menu {
-    /* background-color: #fd8300; */
+    background-color: #fd8300;
     display: none;
+    text-decoration: none;
+}
+
+.menu.sub-menu:hover {
+    text-decoration: none;
 }
 
 .menu>li>a {
@@ -559,13 +579,14 @@ a.instagram:hover {
     font-size: 14px;
     color: #25252c;
     font-family: "Arial";
-    text-decoration: none;
     display: block;
+    text-decoration: none;
 }
 
 .menu>li:hover>a {
-    color: #fd8612;
-    background-color: #3f4852;
+    color: #ffffff;
+    background-color: #fd8300;
+    text-decoration: none;
 }
 
 .menu>li:hover>.sub-menu {
