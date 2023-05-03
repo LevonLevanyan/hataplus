@@ -74,7 +74,7 @@ h3:hover {
 sup {
     font-size: 0.6em;
 }
-`
+
 .flex-between {
     display: flex;
     row-gap: 28px;
