@@ -49,10 +49,6 @@ hr {
     margin-right: 27px;
 }
 
-figure {
-    margin: 0px;
-}
-
 h1 {
     color: #24242b;
     font: 30rem "Roboto Slab";
@@ -67,10 +63,6 @@ h3 {
     /* text-decoration: none; */
 }
 
-h3:hover {
-    text-decoration: underline;
-}
-
 sup {
     font-size: 0.6em;
 }
@@ -83,7 +75,7 @@ sup {
     justify-content: space-between;
 }
 
-.flex-betweentop-menu {
+/* .flex-betweentopMenu {
     padding-top: 42px;
 }
 
@@ -104,7 +96,7 @@ sup {
 .messengercolumn
 .a {
     padding-top: 36px;
-}
+} */
 
 .nav-menu {
     padding-left: 0px;
@@ -124,7 +116,15 @@ ul:hover {
     color: #666666;
 }
 
-.top-menu a {
+.topMenu {
+    display: none;
+}
+
+.active-burger {
+    display: flex;
+}
+
+.topMenu a {
     font-size: 14rem;
     letter-spacing: 2px;
     line-height: 24px;
@@ -135,7 +135,7 @@ ul:hover {
     padding-left: 0px;
 }
 
-.top-menu a:hover {
+.topMenu a:hover {
     color: #fd8300;
 }
 
@@ -293,7 +293,7 @@ a.instagram:hover {
 }
 
 .line  {
-    position: relative;
+    position: relative;  
 }
 
 .line:before {
@@ -440,9 +440,25 @@ a.instagram:hover {
 .figurs {
     display: flex;
     row-gap: 30px;
-    /* max-width: 730rem; */
     column-gap: 28px;
     flex-wrap: wrap;
+}
+
+.figurs figure {
+    position: relative;
+    
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.home:hover~h3 {
+    text-decoration: underline;
 }
 
 .figurs p {
@@ -477,7 +493,7 @@ a.instagram:hover {
     padding: 15px 0;
 }
 
-.top-menu li {
+.topMenu li {
     margin-right: 22px;
 }
 
@@ -490,21 +506,6 @@ a.instagram:hover {
     border-top: 1px solid #cecedd;
 }
 
-.aside-menu li a:first-child
-::before {
-    border-width: 2px;
-    border-style: solid;
-    border: 1px solid #666;
-    border: #666;
-    border-top: 16px;
-    border-right: 14px;
-    border-bottom-width: 8px; 
-    border-bottom: 2px solid #666;
-    border-right: 2px solid #666;
-    transform: rotate(-45deg);  
-    transform: rotate(+45deg);
-}
-
 .menu {
     margin: 0;
     padding-left: 0;
@@ -512,61 +513,59 @@ a.instagram:hover {
     background-color: #e4e4ec;
 }
 
-.menu a::before {
+.menu ul li:hover {
+    background-color: #fd8300;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #25252c;
+    font-family: "Arial";
+    padding: 15px;
+    text-decoration: none;
+}
+
+.menu>li>a::before {
+    top: 19px;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    content: "";
     border-bottom: 2px solid #666;
     border-right: 2px solid #666;
     transform: rotate(-45deg);
+}
+
+.menu>li:hover>a:before {
+    transform: rotate(45deg);
+    border-color: #ffffff;
 }
 
 .menu ul a:last-child {
     border-radius: 0 0 3px 3px ;
 }
 
-.menu>li>a::before {
-    background-color: #cecedd;
-    padding-left: 17px;
-    font-size: 14px;
-    color: #25252c;
-    font-family: "Arial";
-    display: block;
-    text-decoration: none;
-}
-
-.menu ul ~ li a {
-    border-right: 2px solid #666;
-    border-bottom: 2px solid #666;
-    transition: all .5s ease;
-    transform: rotate(-45deg)
-}
-
-.menu a {
-    font-size: 14px;
-    color: #25252c;
-    font-family: "Arial";
-    padding: 15px;
-    display: block;
-    text-decoration: none;
-}
-
-/* .menu li {
-    position: relative;
-} */
-
-
-.menu.sub-menu {
+.sub-menu {
     background-color: #e4e4ec;
     display: none;
     text-decoration: none;
 }
 
-.menu.sub-menu ul>li>:first-child:hover {
+.menu a:hover {
+    background-color: #cecedd;
+}
+
+.sub-menu ul>li>:first-child:hover {
     text-decoration: none;
     background-color: #cecedd;
 }
 
 .menu>li:hover>a {
     color: #ffffff;
-    background-color: #cecedd;
+    /* background-color: #cecedd; */
     text-decoration: none;
     background-color: #fd8300;
 }
@@ -613,17 +612,14 @@ a.instagram:hover {
     color: #fd8300;
 }
 
-.hamburger ul {
-    position: absolute;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
 
 @media screen and (min-width: 580px)  {
     html {
         font-size: 0.9px;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
@@ -640,8 +636,18 @@ a.instagram:hover {
     justify-content: center;
 }
 
-.hamburger{
+/* .hamburger ul {
     position: absolute;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+} */
+
+
+.hamburger{
+    display: block;
+    position: relative;
     padding: 10px;
     width: 50px;
     height: 50px;
@@ -661,23 +667,23 @@ a.instagram:hover {
     transition: box-shadow .25s ease-in-out;
 }
 
-/* .hamburger span{
+.hamburger span{
     transform: translateY(-50%);
-} */
+}
 
-/* .hamburger span:before{
+.hamburger span:before{
     top: 15px;
-} */
+}
 
-/* .hamburger span:after{
+.hamburger span:after{
     top: -15px;
-} */
+}
 
-/* .hamburger-open span,
+.hamburger-open span,
 .hamburger-open span:before,
 .hamburger-open span:after{
     background-color: #444;
-} */
+}
 
 /* .hamburger-open span{
 animation: fade .1s linear .6s forwards;
@@ -755,7 +761,7 @@ animation: right .7s ease-in forwards;
     padding-left: 0px;
 } */
 
-/* .menu {
+/* .topMenu {
     position: absolute;
     left: 80px;
     top: 80px;
@@ -767,11 +773,11 @@ animation: right .7s ease-in forwards;
     overflow: hidden;
 } */
 
-/* .menu li + li {
+/* .topMenu li + li {
     border-top: 1px solid brown;
 } */
 
-/* .menu a {
+/* .topMenu a {
     display: block;
     padding: 20px 40px;
     text-decoration: none;
@@ -794,10 +800,10 @@ animation: right .7s ease-in forwards;
     }
 } */
 
-.active-burger {
+/* .active-burger {
     display: block;
     animation: fadeIn 1s ease;
-}
+} */
 
 /* @keyframes fadeIn {
     from { 
@@ -810,10 +816,3 @@ animation: right .7s ease-in forwards;
     }
 }  */
 
-/* .flex-between top-menu "hamburger"> {
-    <li><a href="#">Головна</a></li>
-    <li><a href="#">Про компанію</a></li>
-    <li><a href="#">Акції</a></li>
-    <li><a href="#">Наші будівлі</a></li>
-    <li><a href="#">Контакти<</a></li>
-}
