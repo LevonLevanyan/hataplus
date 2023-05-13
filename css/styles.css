@@ -108,10 +108,6 @@ ul {
     border-radius: 0 0 3px 3px;
 }
 
-/* ul:not(li a) {
-    border-radius: 0 0 3px 3px;
-} */
-
 ul:hover {
     color: #666666;
 }
@@ -121,7 +117,12 @@ ul:hover {
 }
 
 .active-burger {
-    display: flex;
+    display: block;
+    top: 70px;
+    left: 0px;
+    background-color: #1f1f56;
+    padding: 10px 0 0;
+    z-index: 1;
 }
 
 .topMenu a {
@@ -131,8 +132,8 @@ ul:hover {
     color: #b1b1d2;
     font-family: "Arial";
     text-decoration: none;
-    padding: 25px;
-    padding-left: 0px;
+    padding: 0;
+    display: block;
 }
 
 .topMenu a:hover {
@@ -613,15 +614,6 @@ a.instagram:hover {
 }
 
 
-@media screen and (min-width: 580px)  {
-    html {
-        font-size: 0.9px;
-    }
-
-    .hamburger {
-        display: none;
-    }
-}
 
 .top-background {
     justify-content: space-between;
@@ -646,11 +638,11 @@ a.instagram:hover {
 
 
 .hamburger{
-    display: block;
+    display: inline-block;
     position: relative;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+    /* padding: 5px; */
+    width: 30px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -659,11 +651,11 @@ a.instagram:hover {
 .hamburger span:after {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 7px;
+    width: 30px;
+    height: 4px;
     background-color: #777;
-    border-radius: 5px;
-    top: 50%;
+    border-radius: 3px;
+    top: 13px;
     transition: box-shadow .25s ease-in-out;
 }
 
@@ -672,11 +664,11 @@ a.instagram:hover {
 }
 
 .hamburger span:before{
-    top: 15px;
+    top: 12px;
 }
 
 .hamburger span:after{
-    top: -15px;
+    top: -12px;
 }
 
 .hamburger-open span,
@@ -816,3 +808,23 @@ animation: right .7s ease-in forwards;
     }
 }  */
 
+
+@media screen and (min-width: 580px)  {
+    html {
+        font-size: 0.9px;
+    }
+
+    .hamburger-open,
+    .hamburger {
+        display: none;
+    }
+
+    .topMenu {
+        display: flex;
+        padding: 0;
+    }
+
+    .topMenu a {
+        padding: 0 25px 0 0;
+    }
+}
