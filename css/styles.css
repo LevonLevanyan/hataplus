@@ -37,6 +37,7 @@ body {
 .column {
     min-width: 219px;
     width: 22%;
+    justify-content: space-between;
 }
 
 .sup {
@@ -52,6 +53,7 @@ hr {
 h1 {
     color: #24242b;
     font: 30rem "Roboto Slab";
+    padding-left: 116px;
 }
 
 h3 {
@@ -70,9 +72,21 @@ sup {
 .flex-between {
     display: flex;
     row-gap: 28px;
-    color: #b1b1d2;
+    /* color: #b1b1d2; */
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-self: center;
+    /* width: 494px; */
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    color: #b1b1d2;
+    font-family: "Arial";
+}
+
+.flex-between:hover {
+    /* color: #b1b1d2; */
+    color: #fd8300;
 }
 
 /* .flex-betweentopMenu {
@@ -612,8 +626,6 @@ a.instagram:hover {
     text-decoration: underline;
     color: #fd8300;
 }
-
-
 
 .top-background {
     justify-content: space-between;

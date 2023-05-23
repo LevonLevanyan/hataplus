@@ -456,3 +456,68 @@ a.instagram:hover {
 .feedback form {
 
 }
+
+.wrapper {
+    width: 120px;
+}
+
+.top-background {
+    width: 1200px;
+    height: 55px;
+    background-color: #1f1f56;
+}
+
+.wrapper {
+    width: 120px;
+}
+
+.nav-menuflex-between {
+    width: 1200px;
+    height: 55px;
+    background-color: #1f1f56;
+}
+
+.flex-betweentop-menu {
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    color: #b1b1d2;
+    font-family: "Arial";
+}
+
+.flex-betweentop-menu:hover {
+    background-color: #fd8300;
+
+}
+
+.wrapper {
+    width: 120px;
+}
+
+.flex-betweencontacts {
+    font-size: 18px;
+    line-height: 24px;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.column {
+    
+}
+
+.phonescolumn {
+
+}
+
+.messengerlinecolumn {
+
+}
+
+.ctacolumn {
+    width: 200px;
+    height: 51px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 2px solid #fd8300;
+}
